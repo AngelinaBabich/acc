@@ -68,6 +68,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fff;
+  z-index:1;
 }
 
 [tabindex="-1"]:focus {
@@ -10747,4 +10748,16 @@ header.masthead h1 {
 
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  border-radius: 50%;
+}
+
+#particles-js{
+  z-index: 0 !important
 }
