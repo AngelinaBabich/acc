@@ -1,6 +1,26 @@
 (function($) {
   "use strict"; // Start of use strict
 
+
+  particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 50) {
+      $('#back-to-top').fadeIn();
+    } else {
+      $('#back-to-top').fadeOut();
+    }
+  });
+  // scroll body to 0px on click
+  $('#back-to-top').click(function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 400);
+    return false;
+  });
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
